@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>big companies </title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+
+<body>
+
+<img src="img_la.jpg" alt="LA" style="width:100%">
+
+<div class="heading">
+ <h1>Companies</h1> 
+ </div>
+ <div>
+    <input type="text" id="my list">
+    <input type="button" value="add list" onclick="addNewList()">
+    <br>
+    <button id = "delete" onclick="empty()">empty </button>
+    <br>
+ <ol id= "list">
+
+
+ </ol>
+ </div>
+</div>
+<table>
+    <TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+     <tbody id='table body'>  
+    <tr>
+      <th>Company</th>
+      <th>Label</th>
+      <th>Contact</th>
+      <th>Email</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Huawei</td>
+      <td>
+        <a
+          href=""
+          ><img src="https://" alt=""
+        /></a>
+      </td>
+      <td>356474893393</td>
+      <td>huawei1@gmail.com</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>
+        
+        <a
+          href=""
+          target="_blank"
+          ><img src="" alt=""
+        /></a>
+      </td>
+      <td>0073635637635</td>
+      <td>apple@mail.ru</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Google</td>
+      <td>
+        
+        <a
+          href="https://"
+          target="_blank"
+          ><img src="" alt=""
+        /></a>
+      </td>
+      <td>546739377282</td>
+      <td>google@gmail.com</td>
+      <td>USA</td>
+    </tr>
+     </tbody>
+  </table>
+<hr>
+  <div class="container">
+    <p></p>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+  </div>
+  <footer>
+    <p id='footer'>We welcome you, Hamburg, Germany</p>
+  </footer>
+  <script>
+     let container = document.getElementById('container')
+     let allTd = document.querySelectorAll('td')
+     for (let i=0; i<allTd.length; i++){
+         allTd[i].innerText
+     }
+     const changeH = function(){
+         let heading = document.querySelector('h1')
+         heading.innerText = 'New companies'
+     } 
+     changeH()
+
+     const extraRow = function() {
+         let parentrow1 = document.getElementById('table body')
+         let xrow = document.createElement('tr')
+         xrow.innerText = 'something new'
+        parentrow1.appendChild(xrow)
+     }
+     extraRow()
+
+     const test = function(){
+        let rows = document.querySelectorAll('tr')
+        for (let x=0; x=rows.length; x++) {
+            rows[x].className += 'test'
+        }
+     }
+     test ()
+
+     const addNewList = function() {
+            
+            let li  = document.createElement('li')
+            const value = document.getElementById('my list').value
+            li.innerText = value
+            const ol = document.getElementById('list')
+            ol.appendChild(li)
+            document.getElementById('my list').value =''}
+            addNewList()
+           
+            const empty = function() {
+           
+           const ul = document.getElementById('list')
+           ol.children.remove()
+       }
+empty()
+  </script>
+</body>
+</html>
+31) Get element with ID "container" from the page
+        32) Get every "td" from the page
+        33) Create a cycle that prints the text inside every td of the page
+        34) Write a function to change the heading of the page
+        35) Write a function to add an extra row to the table
+        36) Write a function to add the class "test" to each row in the table
+        37) Write a function to add a red background to every link in the page
+        38) Console log "Page loaded" when the page is correctly loaded
+        39) Write a function to add new items to a UL
+        40) Write a function to empty a list
